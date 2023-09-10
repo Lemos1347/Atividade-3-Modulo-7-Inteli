@@ -1,5 +1,9 @@
 # 📝 Atividade-3-Modulo-7-Inteli -> Previsão do "Spending Score"
 
+## 📺 Demo
+
+https://github.com/Lemos1347/Atividade-3-Modulo-7-Inteli/assets/99190347/d925633e-7499-4e7c-9a59-6e4879b6518b
+
 ## 📊 Preparação dos Dados
 
 Para a criação desse modelo, foi utilizado o conjunto de dados do `kaggle` de [Customer Segmentation](https://www.kaggle.com/datasets/joebeachcapital/customer-segmentation?resource=download). O conjunto de dados contém 200 registros de clientes com 5 atributos: `customerID`, `gender`, `age`, `annual_income` e `spending_score`. O objetivo é prever o `spending_score` de um cliente com base nos outros atributos. Depois de carregado os dados apropriadamente utilizando a biblioteca `pandas`, foi feita a seguinte transformação dos dados:
