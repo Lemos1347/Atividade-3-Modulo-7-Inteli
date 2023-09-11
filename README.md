@@ -32,9 +32,42 @@ Caso a requisição proceda corretamente, a API retorna o "spending score" previ
 
 ## 🐳 Docker
 
-A API foi containerizada utilizando o `Docker`. O arquivo `Dockerfile` utiliza como base a imagem oficial do python, baixa todas as bibliotecas corretamente informadas no arquivo `requirements.txt` e por fim roda a aplicação. O arquivo completo pode ser encontrado [aqui](/Dockerfile).
+A API foi containerizada utilizando o `Docker`. O arquivo `Dockerfile` utiliza como base a imagem oficial do python, baixa todas as bibliotecas corretamente informadas no arquivo `requirements.txt` e por fim roda a aplicação. O arquivo completo pode ser encontrado [aqui](/Dockerfile) e o link para a imagem no Docker hub é:
+[https://hub.docker.com/repository/docker/lemos12/predictive-model-docker/general](https://hub.docker.com/repository/docker/lemos12/predictive-model-docker/general).
 
 ## 📦 Deploy
 
 A API foi deployada na `AWS` utilizando a conta `AWS Acadamy` providenciada para mim. Caso queira testar a API, basta acessar o link [http://18.211.126.21:8000/predict](http://18.211.126.21:8000/predict) e fazer a requisição com o "body" correto.
 **_Obs.: caso não consiga acessar o serviço, isso significa que a instância passou das 4h que é permitida ficar ativa._**
+
+## 💻 Como rodar
+
+Caso você queira rodar o projeto localmente, é possível de duas formas:
+
+### 1º Docker hub
+
+Basta rodar os seguintes comandos em seu terminal:
+
+```bash
+docker pull lemos12/predictive-model-docker
+```
+
+```bash
+docker run -p 8000:8000 lemos12/predictive-model-docker
+```
+
+Pronto! Agora você pode acessar a API através do link [http://localhost:8000/predict](http://localhost:8000/predict).
+
+### 2º Clonando o repositório
+
+Baixe o repositório e entre na pasta do projeto. Em seguida, rode os seguintes comandos em seu terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+python3 main.py
+```
+
+Pronto! Agora você pode acessar a API através do link [http://localhost:8000/predict](http://localhost:8000/predict).
